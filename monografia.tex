@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classe do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Opções:
+%  - Graduação: bacharelado|engenharia|licenciatura
+%  - Pós-graduação: [qualificacao], mestrado|doutorado, ppca|ppginf
+
+% \documentclass[engenharia]{UnB-CIC}%
+\documentclass[qualificacao,mestrado,ppginf]{UnB-CIC}%
+
+\usepackage{pdfpages}% incluir PDFs, usado no apêndice
+%\usepackage[brazil]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage{longtable}
+\usepackage{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações do Trabalho
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\orientador{\prof[a] \dr[a] Edna Dias Canedo}{CIC/UnB}%
+%\coorientador{\prof \dr A DEFINIR}{CIC/UnB}
+\coordenador{\prof[a] \dr[a] Gena\'{i}na Nunes Rodrigues}{CIC/UnB}%
+\diamesano{19}{Março}{2020}%
+
+\membrobanca{ \prof[a] \dr[a] Carla Taciana Lima Lourenço & Prof. Dr. Vander Alves}{ \\ Centro de Informática/UFPE & CIC/UnB}% 
+\membrobanca{Silva Schuenemann}{}%
+
+
+\autor{José Antonio Siqueira de}{Cerqueira}%
+
+\titulo{Privacidade de Dados no Levantamento de Requisitos em Times Ágeis}%
+
+\palavraschave{COLOCAR}%
+
+\keywords{COLOCAR}
+
+
+\newcommand{\unbcic}{\texttt{UnB-CIC}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \capitulo{1_Introducao}{Introdução}%
+    \capitulo{2_Referencial}{Referencial Teórico}%
+    \capitulo{3_Metodologia_de_Desenvolvimento}{Metodologia de Desenvolvimento}%
+    \capitulo{4_Caso_Pratico}{Estudo de Caso Prático}%
+    \capitulo{5_Resultados}{Resultados}%
+    \capitulo{6_Conclusao}{Considerações Finais}%
+\end{document}%
+%cap2
+%2.1 Elicitação de Requisitos
+%2.2 Privacidade de Requisitos
+%2.3 Privacidade by Design
+%2.4 LGPD e GDPR
+%2.5 Related Works
+
+%cap3 Metodologia de Desenvolvimento
+
+%cap4 Estudo de Caso Prático
+
+%cap5 Resultados
+
+%cap 6 Conclusão , na Qualificacao esse cap é Considerações finais
+
+
+%    \apendice{Apendice_Fichamento}{Fichamento de Artigo Científico}%
+ %   \anexo{Anexo1}{Documentação Original \unbcic\ (parcial)}%

@@ -1,12 +1,107 @@
 \label{referencial}
 \section{Metodologias Ágeis}
 
+% -- O mundo hoje em dia está muito rápido, e as mudanças ocorrem de maneira muito rápida
+
+
+% -- Explicação do modelo anterior, e suas desvantagens
+Desde o surgimento da disciplina de Engenharia de Software em 1968, o desenvolvimento de software seguiu os processos enunciados em modelos não iterativos, ou seja, planejados. Um deles é o modelo em cascata, em que a saída de cada fase do processo de desenvolvimento é a entrada para a outra fase, de uma maneira linear. Várias desvantagens foram vistas como por exemplo planejar todo o processo de desenvolvimento, com requisitos que se mantêm estáveis do começo ao fim do desenvolvimento. Além disso, em um projeto complexo, requisitos definidos em sua fase inicial, poderia levar a um produto não mais necessário, depois de anos de desenvolvimento, em que os requisitos atuais já são bem distintos dos iniciais \cite{sommerville2015software}. Também é considerado uma desvantagem o overhead em planejar, projetar e documentar o sistema no modelo tradicional, fazendo com que o software seja desenvolvido e entregue apenas após as fases anteriores sejam cumpridas \cite{sommerville2015software}.
+
+% -- Necessidade do modelo ágil, e suas vantagens
+Os métodos ágeis são métodos de desenvolvimentos incrementais, com entregas pequenas, em curtos períodos de tempo como semanas. A ideia é a entrega de software útil rapidamente, envolvendo os clientes no desenvolvimento para acelerar o feedback, verificando se aquilo que está sendo entregue é aquilo que estava sendo esperado pelo cliente, minimizando documentação \cite{sommerville2015software}.
+O desenvolvimento ágil é vantajoso em ocasiões em que a equipe é de pequena a médio porte, e o software a ser desenvolvido é personalizado. Por exemplo em uma companhia pequena a médio porte, em que se está produzindo um software sob medida para um cliente, seria interessante mostrar entregas incrementais, além do que cliente poder verificar junto com a equipe de desenvolvimento o que se está sendo produzido, este poderia mudar os requisitos de acordo com suas necessidades, que se alteram durante o tempo \cite{sommerville2015software}.
+
+
+% -- O Manifesto ágil e o que todas compartilham em comum
+Apesar dos diferentes métodos ágeis se basearem em diferentes processos ágeis, um conjunto de princípios é compartilhado entre eles, com base no Manifesto Ágil. O desenvolvimento e as entregas de software devem serem feitas incrementalmente. A Tabela X mostra os princípios compartilhados em comum entre as diferentes metodologias.
+
+Inserir Tabela
+Princípio - Descrição
+Envolvimento do cliente
+Os clientes devem estar presentes durante todo o processo de desenvolvimento, provendo e priorizando novos requisitos de sistema e avaliando as iterações do sistema.
+
+Incorporação de mudanças
+Projetar o sistema para acomodar mudanças, pois é esperado que os requisitos mudem.
+
+Entrega incremental
+Os clientes especificam os requisitos a serem incluídos em cada incremento, assim o software é desenvolvido de maneira incremental.
+
+Manter simplicidade
+O processo de desenvolvimento e o software devem caminhar com foco em simplicidade, sendo sempre que possível feita a eliminação de complexidade do sistema.
+
+Pessoas, não processos
+Os times devem desenvolver suas próprias maneiras de trabalhar, assim reconhecendo e explorando as habilidades do time de desenvolvimento.
+
+Caption: Princípios das metodologias ágeis \cite{sommerville2015software}.
+
+
+% -- Quais são as técnicas mais usadas
+
+% -- Pq usar o Scrum em vez das outras Gerenciamento de Projeto Ágil
+% Devo colocar as terminologias do Scrum?
+
+Scrum é uma metodologia ágil que provê um framework para organizar projetos ágeis \cite{sommerville2015software}. O ponto central do Scrum está nas Sprints, que são entregas incrementais do sistema a ser desenvolvido em um período de tempo pré fixado. A atividade de planejamento no Scrum é fundamentada em priorização do backlog -- que é um conjunto de User Stories, atividades a serem desenvolvidas pelo time de desenvolvimento -- e a seleção de uma tarefa com prioridade alta para uma Sprint \cite{sommerville2015software}.
+
+
+% -- Dificuldade de Metodologias Ágeis em relação a REQUISITOS
+Apesar de suas vantagens, ao tratar requisitos os métodos ágeis não criam documentos de requisitos coerentes, pois coletam requisitos informalmente e de maneira incremental \cite{sommerville2015software}, podendo dificultar a manutenção do sistema.
+
+% -- Exemplo de User Stories / com privacidade incluída, né
+TO-DO
 
 \section{Elicitação de Requisitos}
 %cabe subseções : Fontes de Requisitos , Técnicas de Elicitação de Requisitos
 
+% -- Definição Requisitos e Engenharia de Requisitos
+Os requisitos são o reflexo das necessidades dos clientes para um sistema, que devem servir para um propósito (e.g., traçar a rota mais rápida no mapa, não divulgar os dados dos usuários a terceiros). Os requisitos para um sistema são definidos como a descrição dos serviços que um sistema deve fornecer, além das restrições ao seu funcionamento \cite{sommerville2015software}. 
+% -- Classificações de Requisitos (Funcionais e não funcionais)
+Requisitos são definidos por clientes, que muitas vezes não possuem conhecimento técnico necessário para alcançar um alto nível de detalhamento do requisito a ser levantado. Por tanto, existem diferentes níveis de descrição de requisitos. Sommerville \cite{sommerville2015software} distingue entre requisitos do usuário e requisitos do sistema, afim de evidenciar esse fato. 
+
+Requisitos do usuário são descrições em linguagem natural, de alto nível e abstratas, do que o usuário espera que os serviços do sistema possam fornecer, além de restrições em que ele deve operar \cite{sommerville2015software}. Requisitos do sistema são descrições mais detalhadas, devendo definir exatamente o que é a ser implementado, como funções, serviços e restrições operacionais \cite{sommerville2015software}. Essa necessidade de níveis diferentes de detalhamento ao descrever requisitos acontece porque diferentes tipos de leitores utilizam eles de várias maneiras.
+
+Além da distinção entre os níveis de detalhamento dos requisitos apresentada, estes são classificados em dois grupos: requisitos funcionais e requisitos não funcionais.
+Os requisitos funcionais são declarações do que o sistema deve prover, e como deve reagir e se comportar a situações particulares, além do que não deve fazer \cite{sommerville2015software}.
+
+Os requisitos não funcionais geralmente descrevem restrições nas funcionalidades ou serviços de um sistema (e.g., o tempo máximo de consulta não deve exceder 5 segundos, o sistema não pode ficar mais que 5 minutos fora do ar em um dia).  
+
+Sem embargo, não há uma separação precisa entre os tipos de requisitos, revelando que os requisitos não são independentes um dos outros, e que um pode gerar ou limitar outros requisitos. No caso de um requisito de usuário relacionado com segurança, como limitar o acesso somente à usuários autorizados, que podem aparecer como um requisito não funcional, ao ser desenvolvido com um grau maior de detalhamento pode gerar requisitos que são funcionais, como a necessidade da inclusão do serviço de autenticação do usuário no sistema \cite{sommerville2015software}.
+
+Referir-se aos processos de identificar, analisar, documentar e verificar esses serviços e restrições, é definir a Engenharia de Requisitos (ER) \cite{sommerville2015software}. 
+
+% -- Processos da Engenharia de Requisitos
+A Engenharia de Requisitos geralmente é visto como o primeiro estágio do processo de engenharia de software \cite{sommerville2015software}. 
+
+São três as principais atividades envolvidas na ER: elicitação e análise -- descoberta de requisitos ao se interagir com os clientes; especificação -- conversão dos requisitos em uma forma padrão; validação -- checagem que os requisitos realmente definem o sistema que o cliente quer. Estes processos são iterativos e intercalados, produzindo ao final o documento de requisitos do sistema \cite{sommerville2015software}. Nesta dissertação, focamos na atividade de elicitação de requisitos em times ágeis.
+
+% -- Elicitação de Requisitos ( SOMMERVILLE só trata no tradicional, mas ele tem umas paginas la no de agil)
+
+Os objetivos da elicitação de requisitos são entender a) o trabalho que os clientes realizam, e b) como um novo sistema pode auxiliar este trabalho \cite{sommerville2015software}. 
+
+A elicitação de requisitos compreende o conjunto de atividades que permitem a descoberta, compreensão e documentação dos objetivos, além dos motivos para o desenvolvimento de um sistema de software \cite{franco2016}. É durante esta fase -- de elicitação de requisitos -- que os engenheiros de software trabalham juntamente com os clientes, a fim de compreender questões relacionadas ao domínio de aplicação, atividades de trabalho, os serviços e características do sistema que são desejadas pelas partes interessadas, além de aspectos necessários como desempenho, privacidade, entre outros \cite{sommerville2015software}.
+
+% -- Dificuldades enfrentadas durante o processo de Elicitação de Requisitos
+
+As partes interessadas geralmente não sabem o que desejam de um sistema de computador, por serem na maior parte das vezes leigos, descrevendo em termos gerais e com dificuldade de expressar o que esperam. Dificuldade do engenheiro de software de compreender o domínio do usuário, devido a expressão das partes interessadas nos seus próprios termos, em que não se há (tampouco se espera) uma expertise prévia (e.g., um jurista descrevendo um sistema judicial). Como há diferentes partes interessadas e diferentes requisitos, o engenheiro de software deve saber descobrir as distintas fontes de requisitos, além de suas similaridades e diferenças. Pela natureza dinâmica, os fatores políticos e econômicos influenciam nos requisitos, às vezes por exigências específicas de gerentes ou por mudanças inevitáveis de requisitos que podem ocorrer durante esta fase. Assim, são várias as dificuldades percebidas e enfrentadas durante este processo \cite{sommerville2015software}.
+
+Algumas técnicas de elicitação de requisitos são a) Entrevistas, b) Observações, c) Histórias e Cenários. Essas técnicas podem ser aplicadas em conjunto \cite{sommerville2015software}.
+
+\subsection{Elicitação de Requisitos nas Metodologias Ágeis}
+
+% -- Elicitação de Requisitos nas metodologias ágeis - Preâmbulo
+No âmbito das metodologias ágeis, a Engenharia de Requisito é feita iterativamente e ao longo de todo o processo de desenvolvimento, se distinguindo da ER nos modelos tradicionais, que a possuem apenas como uma única fase no início de projeto \cite{FerreiraMartins2019}.
+
+% -- User Stories (ou como se faz a atividade de Engenharia de Requisitos na metodologia ágil)
+
+Para lidar com as mudanças -- visto que os requisitos de software estão em constante mudança --, os métodos ágeis não possuem uma atividade separada de Engenharia de Requisitos. A elicitação de requisitos é integrada ao desenvolvimento \cite{sommerville2015software}. A fim de facilitar esta atividade, foi desenvolvida a ideia de User Stories. A história de usuário é um cenário de uso que pode ser experienciado por um usuário do sistema \cite{sommerville2015software}.
+Visto que desde o princípio o cliente está participando de perto do processo de desenvolvimento, este em conjunto com o time de desenvolvimento elaboram um story card, que descreve brevemente as necessidades do usuário. As histórias de usuário podem ser usadas nas iterações de planejamento do sistema, e, uma vez desenvolvida, é quebrada em tarefas pela equipe de desenvolvimento que então estima o esforço e recursos necessários para a implementação de cada tarefa \cite{sommerville2015software}. O refinamento dos requisitos é feito com os clientes e o time de desenvolvimento, o primeiro prioriza as Stories para implementação. Com o usuário participando e priorizando os user stories a serem implementados, as funcionalidades que são mais úteis e que agregam mais valor de negócio são identificadas e desenvolvidas primeiro, nas primeiras versões do sistema, ou seja, nas primeiras sprint cycles
+
+% -- Dificuldades com User Stories
+A principal desvantagem de se utilizar User Stories para se realizar a atividade de Engenharia de Requisitos nas metodologias ágeis é a dificuldade em se perceber se uma User Story está completa e identifica todos os requisitos essenciais de um sistema \cite{sommerville2015software}.
+
+
 \section{Requisitos de Privacidade}
 
+% -- Aquele artigo que faz uma especificação de requisitos de privacidade como Funcionais
 
 \section{Privacidade By Design}
 
